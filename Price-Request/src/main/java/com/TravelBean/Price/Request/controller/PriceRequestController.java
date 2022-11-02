@@ -37,8 +37,15 @@ public class PriceRequestController {
     }
 
     @GetMapping("/origins")
+    @CrossOrigin(origins="*")
     private List<String> getAllOrigins() {
         return priceRequestService.getAllOrigins();
+    }
+
+    @GetMapping("/price")
+    @CrossOrigin(origins="*")
+    private int getPriceByOriginAndDestination(@RequestParam("origin") String origin, @RequestParam("destination") String destination) {
+       return priceRequestService.getPriceRequest(origin, destination);
     }
 
 

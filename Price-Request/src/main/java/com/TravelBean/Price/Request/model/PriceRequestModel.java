@@ -15,7 +15,7 @@ public class PriceRequestModel {
     @Column(nullable = false)
     private String destination;
     @Column
-    private int distance;
+    private int price;
 
 
     public PriceRequestModel() {
@@ -35,7 +35,7 @@ public class PriceRequestModel {
     }
 
     public int getDistance() {
-        return distance;
+        return price;
     }
 
 
@@ -51,7 +51,7 @@ public class PriceRequestModel {
         this.destination = destination;
     }
 
-    public void setDistance(int distance) {
-        this.distance = distance;
+    public void setPrice(int price) {
+        this.price = price;
     }
 }

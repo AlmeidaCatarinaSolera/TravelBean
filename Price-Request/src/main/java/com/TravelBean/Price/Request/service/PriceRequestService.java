@@ -3,7 +3,6 @@ package com.TravelBean.Price.Request.service;
 import com.TravelBean.Price.Request.model.PriceRequestModel;
 import com.TravelBean.Price.Request.repository.PriceRequestRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -37,6 +36,12 @@ public class PriceRequestService {
     }
 
     public List<String> getAllOrigins() {
+
         return priceRequestRepository.findDistinctOrigins();
+
+    }
+
+    public int getPriceRequest(String origin, String destination) {
+        return priceRequestRepository.findPrice(origin, destination);
     }
 }

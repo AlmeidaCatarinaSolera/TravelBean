@@ -12,5 +12,6 @@ public interface PriceRequestRepository extends CrudRepository<PriceRequestModel
     @Query("SELECT DISTINCT origin FROM PriceRequestModel")
     List<String> findDistinctOrigins();
 
-
+    @Query("SELECT price FROM PriceRequestModel where origin = ?1 and destination = ?2")
+    int findPrice(String origin, String destination);
 }
