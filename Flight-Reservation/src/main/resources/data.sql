@@ -1,3 +1,0 @@
-INSERT INTO FlightReservationModel (id, company,  flightNumber, flightTime, flightDate, scale, luggage, cabinNumber, price ) VALUES (1, 'Tap', 78653, '16:30', '2022-12-10', true, false, 12, 50);
-INSERT INTO FlightReservationModel (id, company,  flightNumber, flightTime, flightDate, scale, luggage, cabinNumber, price ) VALUES (2, 'EasyJet', 98653, '20:30', '2023-01-10', true, false, 20, 100);
-INSERT INTO FlightReservationModel (id, company,  flightNumber, flightTime, flightDate, scale, luggage, cabinNumber, price ) VALUES (3, 'Ryanair', 68653, '10:30', '2023-05-03', true, false, 75, 60);

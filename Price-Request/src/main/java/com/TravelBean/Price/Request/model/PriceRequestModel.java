@@ -16,11 +16,20 @@ public class PriceRequestModel {
     private String destination;
     @Column
     private int price;
+    @Column
+    private String company;
 
 
     public PriceRequestModel() {
     }
 
+    public PriceRequestModel(Integer id, String origin, String destination, int price, String company) {
+        this.id = id;
+        this.origin = origin;
+        this.destination = destination;
+        this.price = price;
+        this.company = company;
+    }
 
     public Integer getId() {
         return id;
@@ -53,5 +62,20 @@ public class PriceRequestModel {
 
     public void setPrice(int price) {
         this.price = price;
+    }
+
+    public int getPrice() {
+        return price;
+    }
+
+    public void setCompany(String company) {
+        this.company = company;
+    }
+
+    public String getCompany() {
+        return company;
+
+
+
     }
 }

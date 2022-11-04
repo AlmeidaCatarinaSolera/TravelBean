@@ -2,10 +2,12 @@ package com.TravelBean.Price.Request.controller;
 
 import com.TravelBean.Price.Request.model.PriceRequestModel;
 import com.TravelBean.Price.Request.service.PriceRequestService;
+import com.fasterxml.jackson.databind.util.JSONPObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 
 @RestController
 public class PriceRequestController {
@@ -44,9 +46,10 @@ public class PriceRequestController {
 
     @GetMapping("/price")
     @CrossOrigin(origins="*")
-    private int getPriceByOriginAndDestination(@RequestParam("origin") String origin, @RequestParam("destination") String destination) {
+    private List<String> getPriceByOriginAndDestination(@RequestParam("origin") String origin, @RequestParam("destination") String destination) {
        return priceRequestService.getPriceRequest(origin, destination);
     }
+
 
 
 }
