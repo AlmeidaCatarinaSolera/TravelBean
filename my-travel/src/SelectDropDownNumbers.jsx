@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Select from 'react-select';
 
 
-class SelectDropDownNumbers extends React.Component {
+class SelectDropDown extends React.Component {
  
     render() {
       return (
@@ -12,8 +12,8 @@ class SelectDropDownNumbers extends React.Component {
             <div className="col-md-6">
             <Select
             onChange={this.props.functionToRun}
-        defaultValue={{label:"Click Load Origins", value: 1}}
-        options={this.props.dropdownList.map((origin) => ({label: origin, value: 1}))}
+        defaultValue={{label:"Not Set", value: 1}}
+        options={[0,1,2,3,4,5].map((number) => ({label: number, value: 1}))}
         theme={(theme) => ({
          ...theme,
         borderRadius: 10,
@@ -33,4 +33,4 @@ class SelectDropDownNumbers extends React.Component {
    
   }
 
-  export default SelectDropDownNumbers;
+  export default SelectDropDown;
